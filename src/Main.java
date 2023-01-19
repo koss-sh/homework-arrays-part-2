@@ -28,9 +28,9 @@ public class Main {
     public static void task2() {
         System.out.println("Задача 2");
         int[] arr = generateRandomArray();
-        int minDailySum = 201_000;
-        int maxDailySum = 0;
-        for (int i = 0; i < arr.length; i++) {
+        int minDailySum = arr[0];
+        int maxDailySum = arr[0];
+        for (int i = 1; i < arr.length; i++) {
             if (arr[i] < minDailySum) {
                 minDailySum = arr[i];
             }
@@ -49,7 +49,7 @@ public class Main {
         for (int element : arr) {
             sum += element;
         }
-        double averageDailySum = sum / 30;
+        double averageDailySum = (double) sum / 30;
         System.out.println("Средняя сумма трат за месяц составила " + averageDailySum + " рублей");
     }
 
